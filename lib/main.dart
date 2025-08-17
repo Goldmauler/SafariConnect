@@ -1,13 +1,13 @@
 // lib/main.dart
-import 'package:flutter/material.dart';
-import 'package:firebase_core/firebase_core.dart'; // Import
-import 'firebase_options.dart'; // Import
-import 'pages/landing_page.dart';
-import 'pages/home_page.dart';
 
-// Make main async
+import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+import 'pages/landing_page.dart'; // Updated path
+import 'main_screen.dart'; // Updated path
+import 'pages/travel_page.dart'; // Updated path
+
 void main() async {
-  // Add these two lines
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
@@ -30,9 +30,16 @@ class MyApp extends StatelessWidget {
           titleLarge: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
         ),
       ),
+      // The app starts with the landing page
       home: const LandingPage(),
+      // Define routes for any pages you want to navigate to by name
       routes: {
-        '/main': (context) => const HomePage(),
+        '/main': (context) => const MainScreen(),
+        '/travel': (context) => const TravelPage(
+              title: "Default Travel Guide",
+              budget: 1500,
+              days: 5,
+            ),
       },
     );
   }
