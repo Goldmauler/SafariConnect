@@ -19,7 +19,7 @@ publish_to: "none" # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ^3.7.2
+  sdk: ^3.9.0
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -31,9 +31,17 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.8
+<<<<<<< HEAD
   firebase_core: ^3.1.1 # Should already be there
   cloud_firestore: ^5.0.2 # Should already be there
   fl_chart: ^0.68.0 # Add this if you haven't already
+=======
+  animations: ^2.0.11
+  simple_animations: ^5.2.0
+  flutter_vector_icons: ^2.0.0
+  form_validator: ^2.1.1
+  google_fonts: ^6.3.0
+>>>>>>> 3ee820771fcec4870d9d8e950a97373c3e85e3ef
 
 dev_dependencies:
   flutter_test:
