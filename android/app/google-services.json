@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "362492285914",
+    "project_id": "safariconnect-de676",
+    "storage_bucket": "safariconnect-de676.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:362492285914:android:47c1a996145c44adba66e3",
+        "android_client_info": {
+          "package_name": "com.example.mapproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBliX_ybvW1DUpl7iNTi_50zTi8uoCwRUI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
