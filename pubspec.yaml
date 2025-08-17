@@ -31,9 +31,9 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.8
-  fl_chart: ^0.68.0
-  firebase_core: ^3.1.1 # Add this
-  cloud_firestore: ^5.0.2 # Add this
+  firebase_core: ^3.1.1 # Should already be there
+  cloud_firestore: ^5.0.2 # Should already be there
+  fl_chart: ^0.68.0 # Add this if you haven't already
 
 dev_dependencies:
   flutter_test:
