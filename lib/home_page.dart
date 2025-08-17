@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
 import 'travel_page.dart';
+import 'lodges_page.dart';
+import 'transport_page.dart';
+import 'destinations_page.dart';
+import 'search_page.dart';
+import 'explore_page.dart';
+import 'profile_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -13,7 +19,9 @@ class HomePage extends StatelessWidget {
           IconButton(
             icon: const Icon(Icons.search),
             onPressed: () {
-              // Handle search action
+              Navigator.of(
+                context,
+              ).push(MaterialPageRoute(builder: (_) => const SearchPage()));
             },
           ),
         ],
@@ -126,23 +134,49 @@ class HomePage extends StatelessWidget {
                   TripCategory(
                     icon: Icons.hotel,
                     label: 'Lodges',
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(builder: (_) => const LodgesPage()),
+                      );
+                    },
                   ),
                   TripCategory(
                     icon: Icons.directions_car,
                     label: 'Transport',
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (_) => const TransportPage(),
+                        ),
+                      );
+                    },
                   ),
                   TripCategory(
                     icon: Icons.map,
                     label: 'Destinations',
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (_) => const DestinationsPage(),
+                        ),
+                      );
+                    },
                   ),
                   TripCategory(
                     icon: Icons.menu_book,
                     label: 'Travel Guide',
                     onTap: () {
-                      Navigator.of(context).pushNamed('/travel');
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder:
+                              (context) => const TravelPage(
+                                title: 'Travel Guide',
+                                imageUrl: null,
+                                budget: 1200,
+                                days: 5,
+                              ),
+                        ),
+                      );
                     },
                   ),
                 ],
@@ -159,7 +193,19 @@ class HomePage extends StatelessWidget {
         ],
         currentIndex: 0,
         onTap: (index) {
-          // Handle bottom navigation tap
+          if (index == 0) return; // already on Home
+          if (index == 1) {
+            Navigator.of(
+              context,
+            ).push(MaterialPageRoute(builder: (_) => const ExplorePage()));
+            return;
+          }
+          if (index == 2) {
+            Navigator.of(
+              context,
+            ).push(MaterialPageRoute(builder: (_) => const ProfilePage()));
+            return;
+          }
         },
       ),
     );

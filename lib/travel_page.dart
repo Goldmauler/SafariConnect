@@ -41,8 +41,12 @@ class TravelPage extends StatelessWidget {
       'Airport transfers',
     ];
 
-    // additional gallery images (user requested one added)
+    // additional gallery images (user requested ones)
     final galleryImages = <String>[];
+    // loading / first image provided by user
+    galleryImages.add(
+      'https://uiuiui.in/uploads/posts/2022-11/1214148605-c55ae0a3a7b1bbfb2b1bb00f7421f329.webp',
+    );
     if (imageUrl != null && !imageUrl!.startsWith('data:')) {
       galleryImages.add(imageUrl!);
     }
