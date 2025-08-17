@@ -2,8 +2,8 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart'; // Import
 import 'firebase_options.dart'; // Import
-import 'landing_page.dart';
-import 'home_page.dart';
+import 'pages/landing_page.dart';
+import 'pages/home_page.dart';
 
 // Make main async
 void main() async {
@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
       ),
       home: const LandingPage(),
       routes: {
-        '/main': (context) => const MainScreen(),
+        '/main': (context) => const HomePage(),
       },
     );
   }
